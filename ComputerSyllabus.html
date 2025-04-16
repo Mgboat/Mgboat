@@ -107,10 +107,156 @@
         </div>
         <div id="chapter2" class="border">
             <h1><u>Chapter 2: Number System, Conversion and Boolean Logic</u></h1>
-            <div class="subhead"><h2>2.1 Boolean Logic Introduction</h2></div>
+            <div class="subhead"><h2>Introduction</h2></div>
             <div class="text">
-                <p>Boolean logic is a fundamental concept in computer science</p>
+                <p>A number system is a writing system for denoting numbers logically using digits or other symbols. It provides a unique representation of every number and reflects the arithmetic and algebraic structure of numbers. In computing, several number systems are utilized:</p>
+                
+                <ul>
+                    <li><strong>Decimal (Base-10):</strong> The standard system for denoting integer and non-integer numbers, using digits from 0 to 9.</li>
+                    <li><strong>Binary (Base-2):</strong> Utilized internally by almost all modern computers and computer-based devices because it is straightforward to implement with digital electronic circuitry. It uses only two digits: 0 and 1.</li>
+                    <li><strong>Octal (Base-8):</strong> Uses digits from 0 to 7. Each octal digit represents three binary digits, making it more compact for representing binary numbers.</li>
+                    <li><strong>Hexadecimal (Base-16):</strong> Uses digits from 0 to 9 and letters A to F. Each hexadecimal digit represents four binary digits, providing a more human-friendly representation of binary-coded values.</li>
+                </ul>
+                
+                <p>Understanding these systems is crucial for tasks such as data representation, memory addressing, and low-level programming.</p>
             </div>
+        
+            <div class="subhead"><h2>Boolean Algebra</h2></div>
+            <div class="text">
+                <p>Boolean algebra is a branch of mathematics that deals with variables that have two distinct values: true and false, typically denoted as 1 and 0, respectively. It forms the foundation of digital logic and is essential for designing and understanding computer circuits and algorithms. Key concepts include:</p>
+                
+                <ul>
+                    <li><strong>Logical Operations:</strong> AND, OR, and NOT operations that define how binary variables interact.</li>
+                    <li><strong>Truth Tables:</strong> Tables that list all possible values of logical variables and the result of applying logical operations to them.</li>
+                    <li><strong>Simplification of Expressions:</strong> Techniques like De Morgan's laws and Karnaugh maps are used to simplify complex Boolean expressions, optimizing digital circuits.</li>
+                </ul>
+                
+                <p>Proficiency in Boolean algebra is vital for tasks such as circuit design, algorithm optimization, and understanding the underlying principles of computer operations.</p>
+            </div>
+        
+            <div class="subhead"><h2>Binary Addition</h2></div>
+            <div class="text">
+                <h3>Rules of Binary Addition</h3>
+                <ul>
+                    <li>0 + 0 = 0</li>
+                    <li>0 + 1 = 1</li>
+                    <li>1 + 0 = 1</li>
+                    <li>1 + 1 = 10 (This is where you "carry" over the 1, similar to decimal addition.)</li>
+                </ul>
+                
+                <h3>Simple example:</h3>
+                <pre>
+          01011
+         + 1101
+         --------
+          11000</pre>
+            </div>
+        
+            <div class="subhead"><h2>Number System Conversions</h2></div>
+            <div class="text">
+                <h3>1. Binary to Decimal Conversion</h3>
+                <p>To convert a binary number (base 2) to decimal (base 10), you multiply each digit by the power of 2 and sum the results.</p>
+                
+                <p><strong>Steps:</strong></p>
+                <ol>
+                    <li>Write the binary number.</li>
+                    <li>Starting from the right, assign each digit a power of 2 (2^0, 2^1, 2^2, etc.).</li>
+                    <li>Multiply each binary digit by the corresponding power of 2.</li>
+                    <li>Sum the results.</li>
+                </ol>
+                
+                <p><strong>Example:</strong> Convert 1011 (binary) to decimal.</p>
+                <p>Start from the right:</p>
+                <ul>
+                    <li>1 = 2^3 = 8</li>
+                    <li>0 = 2^2 = 0</li>
+                    <li>1 = 2^1 = 2</li>
+                    <li>1 = 2^0 = 1</li>
+                </ul>
+                <p>Now sum the results: 8 + 0 + 2 + 1 = 11 (decimal)</p>
+                <p>So, 1011 (binary) = 11 (decimal).</p>
+                
+                <h3>2. Decimal to Binary Conversion</h3>
+                <p>To convert a decimal number (base 10) to binary (base 2), divide the number by 2, recording the remainder each time. Then, read the remainders from bottom to top.</p>
+                
+                <p><strong>Steps:</strong></p>
+                <ol>
+                    <li>Divide the decimal number by 2.</li>
+                    <li>Write down the remainder.</li>
+                    <li>Continue dividing by 2 until the quotient is 0.</li>
+                    <li>The binary number is the string of remainders read from bottom to top.</li>
+                </ol>
+                
+                <h3>3. Binary to Octal Conversion</h3>
+                <p>To convert binary to octal (base 8), group the binary digits in sets of three, starting from the right. If there are not enough digits to make a group of three, add leading zeros. Then, convert each group of three digits to its octal equivalent.</p>
+                
+                <p><strong>Steps:</strong></p>
+                <ol>
+                    <li>Group the binary number into sets of three digits, starting from the right.</li>
+                    <li>Convert each group to octal.</li>
+                </ol>
+                
+                <p><strong>Example:</strong> Convert 110101 (binary) to octal.</p>
+                <p>Group the digits: 110 101</p>
+                <p>Convert each group to octal:</p>
+                <ul>
+                    <li>110 (binary) = 6 (octal)</li>
+                    <li>101 (binary) = 5 (octal)</li>
+                </ul>
+                <p>So, 110101 (binary) = 65 (octal).</p>
+                
+                <h3>4. Octal to Binary Conversion</h3>
+                <p>To convert octal to binary, convert each octal digit to its 3-bit binary equivalent.</p>
+                
+                <p><strong>Steps:</strong></p>
+                <ol>
+                    <li>Write each octal digit in its 3-bit binary equivalent.</li>
+                </ol>
+                
+                <p><strong>Example:</strong> Convert 35 (octal) to binary.</p>
+                <p>Convert each octal digit to binary:</p>
+                <ul>
+                    <li>3 (octal) = 011 (binary)</li>
+                    <li>5 (octal) = 101 (binary)</li>
+                </ul>
+                <p>So, 35 (octal) = 011101 (binary).</p>
+                
+                <h3>5. Binary to Hexadecimal Conversion</h3>
+                <p>To convert binary to hexadecimal (base 16), group the binary digits in sets of four, starting from the right. If there are not enough digits to make a group of four, add leading zeros. Then, convert each group of four binary digits to its hexadecimal equivalent.</p>
+                
+                <p><strong>Steps:</strong></p>
+                <ol>
+                    <li>Group the binary number into sets of four digits, starting from the right.</li>
+                    <li>Convert each group to hexadecimal.</li>
+                </ol>
+                
+                <p><strong>Example:</strong> Convert 1011101 (binary) to hexadecimal.</p>
+                <p>Group the digits: 1011 101</p>
+                <p>Add leading zeros to make a full group of four: 1011 1101</p>
+                <p>Convert each group to hexadecimal:</p>
+                <ul>
+                    <li>1011 (binary) = B (hexadecimal)</li>
+                    <li>1101 (binary) = D (hexadecimal)</li>
+                </ul>
+                <p>So, 1011101 (binary) = BD (hexadecimal).</p>
+                
+                <h3>6. Hexadecimal to Binary Conversion</h3>
+                <p>To convert hexadecimal to binary, convert each hexadecimal digit to its 4-bit binary equivalent.</p>
+                
+                <p><strong>Steps:</strong></p>
+                <ol>
+                    <li>Write each hexadecimal digit in its 4-bit binary equivalent.</li>
+                </ol>
+                
+                <p><strong>Example:</strong> Convert A3 (hexadecimal) to binary.</p>
+                <p>Convert each hexadecimal digit to binary:</p>
+                <ul>
+                    <li>A (hexadecimal) = 1010 (binary)</li>
+                    <li>3 (hexadecimal) = 0011 (binary)</li>
+                </ul>
+                <p>So, A3 (hexadecimal) = 10100011 (binary).</p>
+            </div>
+        </div>
         </div>
         
             <div id="chapter3" class="border">
@@ -213,11 +359,320 @@
         
         </div>
         <div id="chapter5" class="border">
-            <h1><u>Chapter 5: Data Structures</u></h1>
+            <h1><u>                 Chapter 5: Programming Concepts and Logics</u></h1>
+            
             <div class="subhead"><h2>5.1 Introduction</h2></div>
             <div class="text">
-                <p>Data structures are ways to store and organize data efficiently...</p>
+                <p>As we know, every computerized device does not work by itself. They need to be given some sort of command that makes the computer work. These commands help to instruct the computer and program specific actions required by the user. Since the commands are given in the form of computer language, we need programming languages to write the set of instructions that command the computer to perform certain actions, collectively called programs. These programs are again integrated in order to make a complete software. Simply put, software is the collection of different interrelated programs that perform specific functions.</p>
+                
+                <p>Programs written in any type of programming language are not understood by the computer; hence we need some sort of language translator or processor, such as an assembler, compiler, or interpreter, which has the basic function of converting programs written in any type of language into machine-level language.</p>
+                
+                <p>The program written by the programmer is known as the source program. After converting, it becomes a program.</p>
             </div>
+        
+            <div class="subhead"><h2>5.2 Qualities of Good Programs</h2></div>
+            <div class="text">
+                <ul>
+                    <li>It should be easily understood.</li>
+                    <li>A program should be correct; it should be error-free.</li>
+                    <li>It should be reliable.</li>
+                    <li>It should have an easily understandable user interface.</li>
+                    <li>It should be portable and flexible.</li>
+                </ul>
+            </div>
+        
+            <div class="subhead"><h2>5.3 Programming Language</h2></div>
+            <div class="text">
+                <p>In order to make communication between the user and computer, we need a computer language that helps the user generate commands to perform as per the requirement. This language with which we can give instructions to the computer is known as a programming language. Programming languages are sets of different keywords, variables, operators, loops, and other entities using different character sets, including numbers, special symbols, and alphanumeric values.</p>
+                
+                <p>Hence, the process of writing the programming language is known as programming, and the person who writes programs is a programmer.</p>
+            </div>
+        
+            <div class="subhead"><h2>5.4 Types of Programming Languages</h2></div>
+            <div class="text">
+                <p>There are several types of programming languages that can be categorized as follows:</p>
+                
+                <div class="subhead"><h3>Low Level Language</h3></div>
+                <div class="text">
+                    <p>Low-level languages are machine-dependent languages, meaning programs written for one type of system cannot be run on another system. Developers should have detailed analysis and knowledge about the system for which they are going to write a program. Hence, programming in low-level language is very much difficult and time-consuming.</p>
+                    
+                    <p>Different types of low-level programming languages are:</p>
+                    
+                    <h4>Machine Level Language (1GL)</h4>
+                    <p>This language consists of a sequence of 0's and 1's to generate instructions. Since it uses binary numbers, this type of language is directly understood by the processor. So, it has higher execution speed. It is also a machine-dependent language, in which programmers should have detailed knowledge of the system.</p>
+                    
+                    <p><strong>Advantages:</strong></p>
+                    <ul>
+                        <li>It is directly understood by the processor, so execution speed is relatively high.</li>
+                        <li>Language translator or processor is not needed.</li>
+                        <li>It can be used to program specific-purpose computers.</li>
+                    </ul>
+                    
+                    <p><strong>Disadvantages:</strong></p>
+                    <ul>
+                        <li>It is difficult and time-consuming to develop and debug programs.</li>
+                        <li>It is a machine-dependent language. So, programs developed for one system cannot be operated on another system.</li>
+                        <li>All the syntax and commands are in the form of binary numbers, which are difficult to remember.</li>
+                        <li>Programmers should have detailed knowledge about the particular system and its architecture.</li>
+                    </ul>
+                    
+                    <h4>Assembly Language (2GL)</h4>
+                    <p>Assembly language is also an example of a low-level language. In this language, instead of writing instructions in a series of 0's and 1's, we can use mnemonics (symbolic instructions) like ADD, SUB, RST, DIV, MOD, and so on. Since it is closer to machine-level language, a programmer should have detailed knowledge about the computer's internal architecture. This language is faster in comparison to high-level languages. Since this language is not directly understood by the computer, we need a language translator like an assembler to convert it into machine-level language.</p>
+                    
+                    <p><strong>Advantages:</strong></p>
+                    <ul>
+                        <li>It is easier to write, debug, and understand programs written in assembly-level language compared to machine-level language.</li>
+                        <li>Program execution is faster compared to high-level languages.</li>
+                        <li>Since they are machine-dependent, they are used to develop different device drivers.</li>
+                    </ul>
+                    
+                    <p><strong>Disadvantages:</strong></p>
+                    <ul>
+                        <li>It is a machine-dependent language, i.e., a program made for one processor doesn't run on another processor.</li>
+                        <li>The use of mnemonics code makes assembly language much more complex.</li>
+                        <li>Program development and debugging is more difficult and time-consuming compared to high-level languages.</li>
+                    </ul>
+                </div>
+                
+                <div class="subhead"><h3> High Level Language</h3></div>
+                <div class="text">
+                    <p>This language is closer to the English language. High-level language code is written in an English-like structure using mathematical notation. Since it is similar to the English language, it is easier to develop and debug programs. It is a machine-independent language (i.e., a program developed for one processor can work on another processor). Since high-level languages are not directly understood by computers, we need a language processor or translator such as a compiler and interpreter to convert programs written in high-level languages into machine-level language. FORTAN (Formula Translator), introduced in 1956, was the first high-level language. Nowadays, many high-level languages like C, C++, Python, JavaScript, etc., are used.</p>
+                    
+                    <p><strong>Advantages:</strong></p>
+                    <ul>
+                        <li>Since it is closer to the English language, programs written in this language are easier to write, debug, and understand.</li>
+                        <li>Since it is machine-independent, a program written for one processor can work on another processor.</li>
+                        <li>Programmers don't have to remember a large number of mnemonics and other unusual codes.</li>
+                        <li>Program development is faster and requires less effort than other languages.</li>
+                    </ul>
+                    
+                    <p><strong>Disadvantages:</strong></p>
+                    <ul>
+                        <li>Computers don't understand high-level languages directly. So the program needs conversion before execution.</li>
+                        <li>Program execution is slower compared to low-level languages.</li>
+                    </ul>
+                    
+                    <h4>Types of High-Level Languages</h4>
+                    
+                    <h5>Procedural Oriented Language (3GL)</h5>
+                    <p>This type of language is a high-level language that primarily focuses on procedures rather than data. Hence, they are used to express the logic and the procedure of the program. Since it focuses only on procedure, it is complex and time-consuming to write a large program. This type of language follows a top-to-bottom approach, i.e., the main function is written at the bottom of the program. This type of language doesn't pose important and powerful features like data encapsulation, data inheritance, data extraction, and so on. Therefore, it has less security compared to object-oriented languages. Examples: C, FORTRAN, QBasic, etc.</p>
+                    
+                    <p><strong>Advantages:</strong></p>
+                    <ul>
+                        <li>Program development and debugging are easier compared to low-level languages.</li>
+                        <li>More advanced and user-friendly software can be developed.</li>
+                        <li>It is also a machine-independent language.</li>
+                        <li>It is used as a general-purpose programming language.</li>
+                    </ul>
+                    
+                    <p><strong>Disadvantages:</strong></p>
+                    <ul>
+                        <li>A language translator or processor is required to execute the program.</li>
+                        <li>Program execution is slower.</li>
+                        <li>Data security is less in comparison to other high-level languages.</li>
+                    </ul>
+                    
+                    <h5>Problem/Object-Oriented Language (4GL)</h5>
+                    <p>This is the advanced form of high-level language which primarily focuses on data rather than procedure. It allows the user to specify what the output should be without describing all the details (i.e., procedure) of how the data should be manipulated. This type of language follows a bottom-up approach. That means all main functions are written at the bottom of the program, whereas classes and objects are described at the top of the program. Since it has several powerful features such as data encapsulation, data extraction, and inheritance, the data is more secure compared to procedural languages. Examples: C#, C++, Java, etc.</p>
+                    
+                    <p><strong>Advantages:</strong></p>
+                    <ul>
+                        <li>Web-based applications and software can be developed.</li>
+                        <li>More advanced and user-friendly software can be developed.</li>
+                        <li>It is also a machine-independent language.</li>
+                    </ul>
+                    
+                    <p><strong>Disadvantages:</strong></p>
+                    <ul>
+                        <li>A language translator is required to execute the program.</li>
+                        <li>Program execution is slower.</li>
+                        <li>It is difficult to develop hardware-oriented languages.</li>
+                    </ul>
+                    
+                    <h5>Natural Language (5GL)</h5>
+                    <p>Natural language uses simple statements of common communication language, where we could write statements that would look like normal sentences. It is still in the developing stage; computer scientists are working hard to develop such languages. However, programming languages like PROLOG (programming logic) are currently in use. For example, instead of writing some unusual code, programmers would write: "Who are the salesmen who have sold more than 30,000 products last month?"</p>
+                    
+                    <p><strong>Advantages:</strong></p>
+                    <ul>
+                        <li>It will be even easier to develop and debug programs.</li>
+                        <li>It will also be machine-independent language.</li>
+                        <li>More advanced and user-friendly programs will be made.</li>
+                    </ul>
+                    
+                    <p><strong>Disadvantages:</strong></p>
+                    <ul>
+                        <li>A language translator is required to execute the program.</li>
+                        <li>Program execution is slower.</li>
+                        <li>It is difficult to develop hardware-oriented languages.</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="subhead"><h2>5.5 Language Translator/Processor</h2></div>
+            <div class="text">
+                <p>A language translator is system development software that helps convert programs written in assembly or high-level languages (source programs) into machine-level languages (object programs). Since it is difficult and inconvenient to write a program in machine-level language, developers use several assembly and high-level languages that are not directly understood by the computer. Hence, different types of language processors are used to convert and make machine understandable. There are different types of language translators:</p>
+                
+                <div class="subhead"><h3>Types of Language Translators</h3></div>
+                <div class="text">
+                    <h4>Assembler</h4>
+                    <p>An assembler is a language processor that converts a program written in assembly-level language (source program) into machine-understandable language (object language). Since assembly-level language is closer to machine-level language, the conversion process is relatively quicker. It converts the program at once into machine-level language.</p>
+                    
+                    <h4>Compiler</h4>
+                    <p>A compiler is a language processor that helps convert a program written in high-level language (source program) into machine-level program (object program). It converts the whole program into machine-level language at once. It is the largest method of translating a program, but debugging is complex and time-consuming. Programming languages like C, C++, Java, etc., use compilers.</p>
+                    
+                    <h4>Interpreter</h4>
+                    <p>An interpreter is a language processor that converts a program written in high-level language (source program) into machine-level language (object program). It converts one statement at a time, so debugging is easier and less time-consuming. However, its program execution is slower than that of a compiler. Most new programming languages use interpreters, as they allocate less memory space. Programs like BASIC, C#, PHP, etc., use interpreters for conversion.</p>
+                </div>
+                
+                <div class="subhead"><h3>Difference Between Compiler and Interpreter</h3></div>
+                <div class="text">
+                    <table border="1" cellpadding="5" cellspacing="0">
+                        <tr>
+                            <th>S.N.</th>
+                            <th>Compiler</th>
+                            <th>Interpreter</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>It translates the whole program into object code at a time.</td>
+                            <td>It translates one line or a single statement of a program into object code at a time.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>It finds out the error after compiling the complete program.</td>
+                            <td>It finds out the error after translating a line of the program at a time.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>The translating process is incredibly faster.</td>
+                            <td>The translating process is slower.</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Compiler-based programs are difficult to code and debug.</td>
+                            <td>Interpreter-based programs are easier to code and debug.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>It is usually a large program and requires larger memory space.</td>
+                            <td>It is usually a smaller program and requires less memory space.</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>New programming languages don't use compilers.</td>
+                            <td>New programming languages use interpreters.</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>For example: C, C++, Java, FORTRAN, etc.</td>
+                            <td>For example: BASIC, C#, PHP, etc.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        
+            <div class="subhead"><h2>5.6 Syntax and Semantics</h2></div>
+            <div class="text">
+                <p>Programming languages help users communicate with computers. Users follow a set of codes that instruct the computer to perform specific tasks. This set of codes and its structure is known as syntax. Additionally, semantics refers to the meaning attached to individual words or symbols in a programming language. For example:</p>
+                
+                <p>In QBasic:</p>
+                <pre>    Print "This is programming"; P</pre>
+                <p>Here, Print is semantics, and the whole line is the structure (syntax).</p>
+            </div>
+        
+            <div class="subhead"><h2>5.7 Error (BUG)</h2></div>
+            <div class="text">
+                <p>There may be several errors inside a program that stop it from being executed. Such errors are known as bugs. These types of errors may arise from not following the proper rules of the programming language, poor problem analysis, or hardware failure. Errors in a program may result in ambiguous (not accepted/false) results. The process of removing errors from a computer program is known as debugging. There are three types of errors:</p>
+                
+                <div class="subhead"><h3>Types of Errors</h3></div>
+                <div class="text">
+                    <h4>Syntax Error</h4>
+                    <p>A syntax error arises when the programmer does not follow the proper rules or format specified by the programming language. Every programming language has its own vocabulary, punctuation, and structure, and these need to be followed meticulously. Syntax errors can be detected by language processors such as compilers and interpreters. For example, in C, every statement should end with a semicolon. If this is missed, a syntax error will occur.</p>
+                    
+                    <h4>Logical Error</h4>
+                    <p>A logical error occurs due to poorly developed logic, which hampers the solution of the problem. This type of error is not detected by language processors. For example, to calculate simple interest, we use the formula I = (P*T*R)/100. If we instead write I = P*T*R, it will result in a logical error.</p>
+                    
+                    <h4>Runtime Error</h4>
+                    <p>A runtime error occurs when a program is running or executing. These errors are not detected by the language translator. For example, if there is insufficient memory space or a peripheral device fails to turn on, a runtime error will occur.</p>
+                </div>
+            </div>
+        
+            <div class="subhead"><h2>5.8Common Terminology in Programming</h2></div>
+            <div class="text">
+                <h3>Data Types</h3>
+                <p>Data types specify the type of data to be used in a program. Some common types of data are:</p>
+                <ul>
+                    <li><strong>Numeric:</strong> It refers to the combination of all positive and negative whole numbers, including zero.</li>
+                    <li><strong>Character:</strong> It refers to the possible combination of all alphanumeric values, including special symbols.</li>
+                </ul>
+                
+                <h3>Variable and Constant</h3>
+                <p><strong>Variable:</strong><br>
+                Variables are entities that hold either numeric or alphanumeric values and can change their values during the execution of the program.</p>
+                
+                <p><strong>Constant:</strong><br>
+                Constants are entities that hold either numeric or alphanumeric values but do not change their values during the execution of the program.</p>
+                
+                <h3>Operands, Operators, and Operations</h3>
+                <p>Consider the following example:</p>
+                <pre>S = A + B</pre>
+                <p>In this example:</p>
+                <ul>
+                    <li>S, A, B are operands.</li>
+                    <li>+ and = are operators.</li>
+                    <li>S = A + B denotes the sum of two operands, A and B, which is the operation.</li>
+                </ul>
+                
+                <h3>Types of Operators</h3>
+                <p>Operators are special symbols that help to perform specific operations. Commonly used operators are:</p>
+                <ul>
+                    <li>Arithmetic operators: +, -, /, *</li>
+                    <li>Relational operators: &lt;, &gt;, &gt;=, &lt;=, =</li>
+                    <li>Logical operators: AND, OR, NOT</li>
+                </ul>
+            </div>
+        
+            <div class="subhead"><h2>5.9 Program Design Tools</h2></div>
+            <div class="text">
+                <p>There are several program design tools that are available. Some of the commonly used program design tools are algorithms, flowcharts, and pseudocode.</p>
+                
+                <h3>Algorithm</h3>
+                <p>An algorithm is a step-by-step procedure or sequence of steps for solving a specific problem. Algorithms are written in simple English and are not close to any programming language.</p>
+                
+                <p><strong>Rules for Writing an Algorithm:</strong></p>
+                <ul>
+                    <li>The algorithm should produce an output after a finite number of steps.</li>
+                    <li>The algorithm should not depend on any programming language.</li>
+                    <li>The algorithm should terminate after a finite number of steps.</li>
+                </ul>
+                
+                <p><strong>Examples:</strong></p>
+                <p>1. Write an algorithm to calculate simple interest.</p>
+                <pre>
+        Step 1: Start
+        Step 2: Read the value of P, T, R
+        Step 3: Calculate simple interest by using I = (P * T * R) / 100
+        Step 4: Display simple interest (I)
+        Step 5: Stop</pre>
+                
+                <p>2. Write an algorithm to check the greatest number among two numbers.</p>
+                <pre>
+        Step 1: Start
+        Step 2: Read any two numbers a, b
+        Step 3: Check if (a > b)
+            If yes, Display the greatest number is "a" and go to step 4
+            If no, Display the greatest number is "b" and go to step 4
+        Step 4: Stop</pre>
+                
+                <h3>Flowchart</h3>
+                <p>A flowchart is a diagrammatic or pictorial representation of the steps involved in an algorithm to solve a particular problem. It uses several geometrical shapes and symbols for representing different actions involved in problem-solving.</p>
+                
+                <p>There are two types of flowcharts:</p>
+                <ul>
+                    <li><strong>Program Flowchart:</strong> This type of flowchart focuses on a specific problem and portrays only a single task (logic) at a time.</li>
+                </ul>
+            </div>
+        </div>
         </div>
         <div id="chapter6" class="border">
             <h1><u>Chapter 6: Networking and the Internet</u></h1>
